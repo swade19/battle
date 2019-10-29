@@ -1,6 +1,8 @@
-require "sinatra"
-get "/" do
-  "<h1/>
-    Hello World 
-    </h1>"
+require "sinatra/base"
+
+class Battle < Sinatra::Base
+  get "/" do
+    "Hello Battle!"
+  end
+  run! if app_file == $0
 end
